@@ -1,12 +1,19 @@
+
+
+
 main {
     padding: 10px;
-    width: 100%;
+    width: 500px;
     display: flex;
-    justify-content: center;
-
-}
+    flex-direction: column; 
+} 
 
 .calculation {
     border: 1px solid black;
-    padding: 10px;
+    padding: 20px;
+    margin: 5px;
+}
+
+span {
+   padding-left: 13px;
 }
