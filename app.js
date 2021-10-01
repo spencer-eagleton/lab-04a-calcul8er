@@ -1,7 +1,7 @@
 // import functions
 import { add } from './calculations.js';
 import { subtract } from './calculations.js';
-import { multiply } from './calculations.js';
+import { multiply, divide } from './calculations.js';
 
 const addInput1 = document.getElementById('add-input-1');
 const addInput2 = document.getElementById('add-input-2');
@@ -51,7 +51,20 @@ multiplyButton.addEventListener('click', ()=> {
     // console.log('clicked!');
 });
 
+const divideInput1 = document.getElementById('divide-input-1');
+const divideInput2 = document.getElementById('divide-input-2');
+const divideButton = document.getElementById('divide-button');
+const divideAnswer = document.getElementById('divide-answer');
 
+divideButton.addEventListener('click', ()=> {
+
+    const value1 = Number(divideInput1.value);
+    const value2 = Number(divideInput2.value);
+    const answer = divide(value1, value2);
+
+    divideAnswer.textContent = answer;
+
+});
 
   // get user input
   // use user input to update state 
