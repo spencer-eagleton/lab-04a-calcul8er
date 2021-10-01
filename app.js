@@ -1,6 +1,7 @@
-// import functions and grab DOM elements
+// import functions
 import { add } from './calculations.js';
 import { subtract } from './calculations.js';
+import { multiply } from './calculations.js';
 
 const addInput1 = document.getElementById('add-input-1');
 const addInput2 = document.getElementById('add-input-2');
@@ -8,7 +9,7 @@ const addButton = document.getElementById('add-button');
 const addOutput = document.getElementById('add-output');
 
 
-// initialize global state
+
 addButton.addEventListener('click', ()=> {
     const value1 = Number(addInput1.value);
     const value2 = Number(addInput2.value);
@@ -30,9 +31,28 @@ subtractButton.addEventListener('click', ()=> {
     subtractAnswer.textContent = answer;
 });
 
+//  and grab DOM elements
+
+const multiplyInput1 = document.getElementById('multiply-input-1');
+const multiplyInput2 = document.getElementById('multiply-input-2');
+const multiplyButton = document.getElementById('multiply-button');
+const multiplyAnswer = document.getElementById('multiply-answer');
 
 
-// set event listeners 
+// initialize global state
+//set event listeners 
+
+multiplyButton.addEventListener('click', ()=> {
+    const num1 = Number(multiplyInput1.value);
+    const num2 = Number(multiplyInput2.value);
+    const answer = multiply(num1, num2);
+
+    multiplyAnswer.textContent = answer;
+    // console.log('clicked!');
+});
+
+
+
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
