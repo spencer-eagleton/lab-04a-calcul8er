@@ -7,25 +7,42 @@ h1 {
     
     font-family: Major Mono Display;
     font-size: 40px;
+    color: rgb(53, 53, 43);
     
 }
 
 main {
     padding: 10px;
-    width: 500px;
+    width: 450px;
     display: flex;
     flex-direction: column; 
     margin: auto;
+    
    
 } 
 
 .calculation {
-    border: 1px solid rgb(211, 204, 147);
+    border: 1px solid rgb(214, 203, 139);
     padding: 20px;
-    margin: 5px;
+    margin: 10px;
     border-radius: 20%;
+    display: block;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 span {
    padding-left: 13px;
+   font-family: Major Mono Display;
+   
+}
+
+input {
+    width: 75px;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+   
+}
+input[type=text]:focus { 
+    width: 40%;
 }
